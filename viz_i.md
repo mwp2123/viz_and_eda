@@ -312,3 +312,41 @@ weather_df %>%
     ## Warning: Removed 15 rows containing non-finite values (stat_density_ridges).
 
 ![](viz_i_files/figure-gfm/unnamed-chunk-19-1.png)<!-- -->
+
+\#\#Save and Embed
+
+``` r
+weather_plot =
+  weather_df %>% 
+  ggplot(aes(x=tmin, y=name)) +
+  geom_density_ridges()
+
+ggsave("weather_plot.pdf", weather_plot, width=8, height =5)
+```
+
+    ## Picking joint bandwidth of 1.67
+
+    ## Warning: Removed 15 rows containing non-finite values (stat_density_ridges).
+
+What about
+    embedding?
+
+``` r
+weather_plot
+```
+
+    ## Picking joint bandwidth of 1.67
+
+    ## Warning: Removed 15 rows containing non-finite values (stat_density_ridges).
+
+![](viz_i_files/figure-gfm/unnamed-chunk-21-1.png)<!-- -->
+
+``` r
+weather_plot
+```
+
+    ## Picking joint bandwidth of 1.67
+
+    ## Warning: Removed 15 rows containing non-finite values (stat_density_ridges).
+
+![](viz_i_files/figure-gfm/unnamed-chunk-22-1.png)<!-- -->
