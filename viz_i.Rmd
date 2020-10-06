@@ -1,6 +1,6 @@
 ---
 title: "viz_and_eda"
-subtitle: "Part iI
+subtitle: "Part i"
 author: "Murrel Pereira"
 date: "10/5/2020"
 output: github_document
@@ -189,5 +189,13 @@ weather_df %>%
   ggplot(aes(x=name, y=tmin, fill=name)) +
   geom_violin(alpha=0.5) +
   stat_summary()
+```
+
+Ridge plots... most popular plot of 2017
+
+```{r}
+weather_df %>% 
+  ggplot(aes(x=tmin, y=name)) +
+  geom_density_ridges()
 ```
 
